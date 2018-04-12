@@ -75,3 +75,5 @@ if __name__ == "__main__":
     test = Card(Card.Rank.Jack, Card.Suit.Spade)
     cur_suit = Card.Suit.Spade
     print(Card.get_card_value(test, cur_suit))
+	
+	#Put test code here

@@ -77,3 +77,17 @@ if __name__ == "__main__":
     print(Card.get_card_value(test, cur_suit))
 	
 	#Put test code here
+	 card1 = Card(Card.Rank.Nine, Card.Suit.Diamond)
+    card2 = Card(Card.Rank.Jack, Card.Suit.Spade)
+
+    cur_suit = Card.Suit.Diamond
+    print(Card.get_card_value(card1, cur_suit))
+
+    assert Card.get_card_value(card1, cur_suit) == 12
+    assert Card.get_card_value(card1, Card.Suit.Club) == 1
+
+    cur_suit = Card.Suit.Spade
+    assert Card.get_card_value(card2, cur_suit) == 35
+
+    card3 = Card(Card.Rank.Jack, Card.Suit.Club)
+    assert Card.get_card_value(card3, Card.Suit.Spade) == 31
